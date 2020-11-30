@@ -1,0 +1,7 @@
+{
+  "short_name": "PhotoBoard",
+  "name": "Приложение для просмотра фотографий",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#141514"
+}
