@@ -47,12 +47,10 @@ export const getPhotos = () => {
 
 export const morePhotos = () => {
   return async dispatch => {
-    dispatch(showLoader())
     unsplash.photos.listPhotos(count++, 10, 'latest')
     .then(toJson)
     .then((json) => {
       dispatch({ type: MORE_PHOTOS, payload: json })
-      dispatch(hideLoader())
     });
   }
 } // Получаем следующую страницу последних фото

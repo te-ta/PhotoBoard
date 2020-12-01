@@ -1,16 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { compose, createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
+
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 import App from './App'
 import { rootReducer } from './redusers/rootReducer'
 
-const store = createStore(
-  rootReducer, compose(
-    applyMiddleware(thunk),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-  ))
+const store = createStore( rootReducer, applyMiddleware(thunk) )
 
 ReactDOM.render(
   <Provider store={store}>
@@ -19,5 +16,4 @@ ReactDOM.render(
     </React.StrictMode>
   </Provider>,
   document.getElementById('root')
-);
-
+)
