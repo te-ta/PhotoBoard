@@ -11,4 +11,4 @@ export const HIDE_LOADER = 'APP/HIDE_LOADER'
 export const ACCESS_PERMISSIONS = ['public', 'write_likes']
 export const ACCESS_KEY = 'SOME_ACCESS_KEY' 
 export const SECRET_KEY = 'SOME_SECRET_KEY'
-export const CALLBACK_URL = 'SOME_CALLBACK_URL/auth'
+export const CALLBACK_URL = 'SOME_URL/auth'

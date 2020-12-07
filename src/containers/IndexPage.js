@@ -16,6 +16,6 @@ const IndexPage = () => {
       {getBgImg()}
     </div>   
   )
-} // Авторизоваться или показать фотографии
+} // Авторизоваться или показать фото
 
 export default IndexPage
