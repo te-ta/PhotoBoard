@@ -26,7 +26,7 @@ const PhotoThumb = ({ photo }) => {
         src={photo.urls.small}
       />
     </li>
-  )
+  ) // экзнмпляр превью фото
 }
 
 export default PhotoThumb

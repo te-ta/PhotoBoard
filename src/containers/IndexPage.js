@@ -1,23 +1,21 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { getAuth, morePhotos } from '../actions' 
+import { useSelector } from 'react-redux'
+import { getAuth, getBgImg } from '../actions/unsplash' 
 import PhotoList from '../components/PhotoList'
 
 
 const IndexPage = () => {
-  const dispatch = useDispatch()
   const isLogin = useSelector(state => state.app.isLogin)
 
   return (isLogin ? 
-    <>
-      <PhotoList /> 
-      <button className='button-more' onClick={() => dispatch(morePhotos())}>ЕЩЕ БОЛЬШЕ ФОТО!</button>
-    </> : 
-    <div> 
-      <h3 className='title'>Вы не залогинены</h3>
-      <button className='button' onClick={getAuth}>Авторизоваться?</button> 
+    <PhotoList /> : 
+    <div className='wrapper'> 
+      <h1 className='title'>PhotoBoard</h1>
+      <h2 className='subtitle'>- бесконечный поток фотографий -</h2>
+      <button className='button' onClick={getAuth}>Войти</button> 
+      {getBgImg()}
     </div>   
   )
-}
+} // Авторизоваться или показать фотографии
 
 export default IndexPage

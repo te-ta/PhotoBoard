@@ -16,28 +16,61 @@ body {
   justify-content: center;
   margin: 0;
   background-color: $black;
+  background-size: cover!important;
   color: $white;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#root {
+  width: 100%;
+  background-color: $main-cover;
 }
 
 .app { 
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  height: 100%;
+  min-height: 100%;
   font-size: 16px;
   text-align: center;
-  font-size: 16px;
+
+  @include mobile {
+    padding: 7px;
+  }
 }
 
-.container { 
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 40px;
+.container {
+  padding: 0 20px;
+  max-width: 1180px;
+}
+
+.wrapper {
+  padding: 60px 30px 30px;
+  border: 3px solid $white;
+
+  @include little {
+    padding: 30px 14px 0;
+  }
 }
 
 .title {
-  font-size: 40px;
+  margin: 0;
+  font-size: 50px;
+  
+  @include little {
+    font-size: 35px;
+  }
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: normal;
+  
+  @include little {
+    font-size: 14px;
+  }
 }
 
 
@@ -57,12 +90,13 @@ body {
 // Кнопки
 
 .button {
+  margin: 40px auto;
   min-width: 160px;
   min-height: 40px;
   border: 1px solid $white;
   border-radius: 5px;
   background-color: transparent;
-  color: $white;
+  color: inherit;
   cursor: pointer;
 }
 
@@ -83,7 +117,6 @@ body {
 
 }
 
-
 .button-more {
   margin-top: 30px;
   width: 100%;
@@ -95,9 +128,7 @@ body {
   cursor: pointer;
 }
 
-.button-more:hover,
-.button-more:active,
-.button-more:focus {
+.button-more:hover {
   border-color: $bright;
   background-color: $bright;
   color: $black;
@@ -107,9 +138,9 @@ body {
 // Loader 
 
 .loader {
-  margin: 100px auto;
-  width: 100px;
-  height: 100px;
+  margin: 20px auto;
+  width: 60px;
+  height: 60px;
   background: url(../img/loading.gif) no-repeat center;
   background-size: contain;
 }

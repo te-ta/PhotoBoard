@@ -6,28 +6,35 @@
 
 .item__back {
   position: absolute;
-  top: 70px;
-  right: 20px;
-  width: 30px;
-  height: 30px;
-  border: 2px solid $second;
-  border-radius: 50%;
-  background: none;
+  top: 50px;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-content: top;
+  padding: 10px;
+  width: 60px;
+  height: 60px;
+  border: none;
+	background: $second-tr;
+  background: linear-gradient(45deg, 
+    rgba(255,255,255,0) 50%, 
+    rgba(150,170,183,0.6) 50%);
   font-size: 20px;
-  color: $second;
+  color: $black;
   cursor: pointer;
 }
 
 .item__back:hover,
 .item__back:active {
-  border-color: $bright;
-  background-color: $bright;
-  color: $black
+  background: $second-tr;
+  background: linear-gradient(45deg, 
+    rgba(255,255,255,0) 50%, 
+    rgba(255,211,0,0.6) 50%);
 }
 
 .item__image {
-  max-width: 96vw;
-	max-height: calc(96vh - 30px);
+  max-width: 95vw;
+	max-height: calc(95vh - 30px);
 }
 
 .item__info {

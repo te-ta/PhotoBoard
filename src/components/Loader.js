@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Loader = () => (
-  <div className='loader'></div>
-)
+const Loader = () => { 
+  return <div className='loader'></div>
+} // в моменты подгрузки фото
 
 export default Loader

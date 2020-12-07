@@ -34,7 +34,7 @@ const PhotoItem = ({ match }) => {
       />
     </div> :
     <Redirect to='/' />
-  )
+  ) // полноэкранное фото
 }
 
 export default PhotoItem

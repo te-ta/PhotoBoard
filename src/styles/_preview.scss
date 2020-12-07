@@ -1,11 +1,11 @@
 // PhotoList & PhotoTumb styles for preview photos
 
 .tumbs {
-  margin: 0;
+  margin: 40px 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   list-style: none; 
 }
 
@@ -13,11 +13,16 @@
   margin: 0;
   padding: 0;
   position: relative;
-  margin-top: 30px;
+  margin: 20px;
 }
 
 .tumb__image {
-  height: 340px;
+  height: 320px;
+  
+  @include mobile {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .tumb:hover .tumb__hide {
