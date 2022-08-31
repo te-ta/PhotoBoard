@@ -1,0 +1,92 @@
+// PhotoList & PhotoTumb styles for preview photos
+
+.tumbs {
+  margin: 40px 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style: none; 
+}
+
+.tumb {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  margin: 20px;
+}
+
+.tumb__image {
+  height: 320px;
+  
+  @include mobile {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.tumb:hover .tumb__hide {
+  opacity: 1;
+}
+
+
+.tumb__hide {
+  position: absolute;
+  opacity: 0;
+  transition: .7s opacity;
+}
+
+.tumb__cover {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: $black-tr;
+  opacity: 0;
+  transition: .7s opacity;
+}
+
+.tumb__info {
+  display: flex;
+  align-items: center;
+  left: 20px;
+  bottom: 20px;
+}
+
+.tumb__like {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: url(../img/like.png) no-repeat center;
+  background-size: contain;
+  font-size: 12px;
+  font-weight: bold;
+  color: $red;
+}
+
+.tumb__unlike {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: url(../img/unlike.png) no-repeat center;
+  background-size: contain;
+  font-size: 12px;
+  font-weight: bold;
+  color: $second;
+}
+
+.tumb__author {
+  margin-left: 10px;
+  z-index: 20; 
+}
+
+.tumb__data {
+  top: 20px;
+  right: 20px;
+  font-size: 12px;
+  color: $second;
+}

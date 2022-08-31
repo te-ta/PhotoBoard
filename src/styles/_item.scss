@@ -1,0 +1,98 @@
+// PhotoItem styles for big photo
+
+.item {
+  position: relative;
+}
+
+.item__back {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-content: top;
+  padding: 10px;
+  width: 60px;
+  height: 60px;
+  border: none;
+	background: $second-tr;
+  background: linear-gradient(45deg, 
+    rgba(255,255,255,0) 50%, 
+    rgba(150,170,183,0.6) 50%);
+  font-size: 20px;
+  color: $black;
+  cursor: pointer;
+}
+
+.item__back:hover,
+.item__back:active {
+  background: $second-tr;
+  background: linear-gradient(45deg, 
+    rgba(255,255,255,0) 50%, 
+    rgba(255,211,0,0.6) 50%);
+}
+
+.item__image {
+  max-width: 95vw;
+	max-height: calc(95vh - 30px);
+}
+
+.item__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  color: $second;
+}
+
+.item__author {
+  margin-left: 10px;
+}
+
+.item__data {
+  flex-grow: 1;
+  font-size: 14px;
+  text-align: right;
+}
+
+
+// Likes
+
+.item__like {
+  padding-left: 30px;
+  width: 70px;
+  height: 22px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.do-like {
+  background: transparent url(../img/unlike.png) no-repeat left;
+  background-size: contain;
+  color: $second;
+}
+
+.do-like:hover {
+  background-image:  url(../img/like.png); 
+  color: $red;
+}
+
+.do-like:hover::after {
+  content: '+';
+}
+
+.do-unlike {
+  background: transparent url(../img/like.png) no-repeat left;
+  background-size: contain;
+  color: $red;
+}
+
+.do-unlike:hover {
+  background-image:  url(../img/unlike-.png); 
+  color: $bright;
+}
+
+.do-unlike:hover::after {
+  content: '-';
+}

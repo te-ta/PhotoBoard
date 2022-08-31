@@ -1,0 +1,24 @@
+//colors
+$black: #141514;
+$black-tr: #141514bb;
+$main-cover: #14151499;
+$white: #f9f9f9;
+$second-tr: #96aab7bb; 
+$second: #96aab7; 
+$bright: #FFD300;
+$bright-tr: #FFD300bb;
+$red: #e06063;  
+
+
+// screens
+@mixin mobile {
+  @media (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin little {
+  @media (max-width: 450px) {
+    @content;
+  }
+}

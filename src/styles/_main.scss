@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  background-color: $black;
+  background-size: cover!important;
+  color: $white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#root {
+  width: 100%;
+  background-color: $main-cover;
+}
+
+.app { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  font-size: 16px;
+  text-align: center;
+
+  @include mobile {
+    padding: 7px;
+  }
+}
+
+.container {
+  padding: 0 20px;
+  max-width: 1180px;
+}
+
+.wrapper {
+  padding: 60px 30px 30px;
+  border: 3px solid $white;
+
+  @include little {
+    padding: 30px 14px 0;
+  }
+}
+
+.title {
+  margin: 0;
+  font-size: 50px;
+  
+  @include little {
+    font-size: 35px;
+  }
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: normal;
+  
+  @include little {
+    font-size: 14px;
+  }
+}
+
+
+// ссылки
+
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link:hover,
+.link:active {
+  color: $bright;
+}
+
+
+// Кнопки
+
+.button {
+  margin: 40px auto;
+  min-width: 160px;
+  min-height: 40px;
+  border: 1px solid $white;
+  border-radius: 5px;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.button:focus {
+  background-color: $white;
+  color: $black;
+}
+
+.button:hover {
+  border-color: $second;
+  background-color: $second;
+  color: $black;
+}
+
+.button:active {
+  border-color: $bright;
+  background-color: $bright;
+
+}
+
+.button-more {
+  margin-top: 30px;
+  width: 100%;
+  height: 80px;
+  border: none;
+  border-radius: 5px;
+  background-color: $second-tr;
+  color: $black;
+  cursor: pointer;
+}
+
+.button-more:hover {
+  border-color: $bright;
+  background-color: $bright;
+  color: $black;
+}
+
+
+// Loader 
+
+.loader {
+  margin: 20px auto;
+  width: 60px;
+  height: 60px;
+  background: url(../img/loading.gif) no-repeat center;
+  background-size: contain;
+}
